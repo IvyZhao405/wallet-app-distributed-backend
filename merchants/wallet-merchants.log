@@ -479,3 +479,8 @@ java.lang.Exception: Header is missingtoken!
 2021-06-16 11:24:29.542  INFO 36296 --- [http-nio-9527-exec-2] d.i.w.merchants.controller.MerchantsCtl  : BuildMerchantsInfo: 19
 2021-06-16 11:24:29.578  INFO 36296 --- [http-nio-9527-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
 2021-06-16 11:30:18.180  INFO 36296 --- [http-nio-9527-exec-8] d.i.w.merchants.controller.MerchantsCtl  : CreateMerchants: {"address":"Tampa","businessLicenseUrl":"www.ivyzhao.dev","logoUrl":"www.ivyzhao.dev","name":"IvyDev2","phone":"1234567890"}
+2021-06-16 11:51:43.457  INFO 36296 --- [Thread-11] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31c88ec8: startup date [Wed Jun 16 11:13:46 EDT 2021]; root of context hierarchy
+2021-06-16 11:51:43.475  INFO 36296 --- [Thread-11] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2021-06-16 11:51:43.476  INFO 36296 --- [Thread-11] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2021-06-16 11:51:43.477  INFO 36296 --- [Thread-11] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2021-06-16 11:51:43.478  INFO 36296 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
