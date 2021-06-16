@@ -8,6 +8,7 @@ public enum ErrorCode {
     DUPLICATE_NAME(1, "Merchant name is duplicated"),
     EMPTY_LOGO(2, "Merchant logo is empty"),
     EMPTY_BUSINESS_LICENSE(3, "Merchant business license is empty"),
+    EMPTY_PHONE(4, "Merchant phone number is empty"),
     EMPTY_ADDRESS(5, "Merchant address is empty"),
     MERCHANTS_NOT_EXISTS(6, "Merchant doesn't exist");
 
