@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: UserWallet
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/wallet?autoReconnect=true&useSSL=false
+    username: root
+    password: 910108zxc
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      group-id: wallet
+    listener:
+      concurrency: 4
+  data:
+    hbase:
+      quorum: 127.0.0.1:2181
+      rootDir: /Users/xiaochuangzhao/data/hbase
+      nodeParent: /hbase
+    redis:
+      host: 127.0.0.1
+      port: 6379
+
+server:
+  port: 9528
+
+logging:
+  level: debug
+  file: wallet-user.log

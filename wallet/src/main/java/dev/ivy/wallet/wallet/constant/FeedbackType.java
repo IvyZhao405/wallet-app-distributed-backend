@@ -6,21 +6,21 @@ package dev.ivy.wallet.wallet.constant;
  */
 public enum FeedbackType {
 
-    PASS(1, "Coupon related feedback"),
-    APP(2, "wallet app related feedback");
+    PASS("pass", "Coupon related feedback"),
+    APP("app", "wallet app related feedback");
 
     /** feedback code */
-    private Integer code;
+    private String code;
 
     /** feedback type description */
     private String desc;
 
-    FeedbackType(Integer code, String desc) {
+    FeedbackType(String code, String desc) {
         this.code = code;
         this.desc = desc;
     }
 
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

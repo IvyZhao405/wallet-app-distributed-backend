@@ -8,7 +8,7 @@ public class Constants {
     public static final String TEMPLATE_TOPIC = "merchants-template";
 
     /** token file temp folder */
-    public static final String TOKEN_DIR = "/tmp/token/";
+    public static final String TOKEN_DIR = "/Users/xiaochuangzhao/Documents/tmp/token/";
 
     /** used token file suffix */
     public static final String USED_TOKEN_SUFFIX = "_";
