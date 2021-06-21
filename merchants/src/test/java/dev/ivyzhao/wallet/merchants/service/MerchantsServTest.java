@@ -54,17 +54,20 @@ public class MerchantsServTest {
     @Test
     public void testDropPassTemplate(){
         PassTemplate passTemplate = new PassTemplate();
-        passTemplate.setId(19);
-        passTemplate.setTitle("title: ivy");
-        passTemplate.setSummary("summary: ivy dev");
-        passTemplate.setDesc("descriotion: ivy dev");
+        passTemplate.setId(20);
+        passTemplate.setTitle("ivydev");
+        passTemplate.setSummary("summary: ivy dev 3");
+        passTemplate.setDesc("descriotion: ivy dev 3");
         passTemplate.setLimit(10000L);
-        passTemplate.setHasToken(false);
+        passTemplate.setHasToken(true);
         passTemplate.setBackground(2);
-        passTemplate.setStart(new Date());
+        passTemplate.setStart(DateUtils.addDays(new Date(), -10));
         passTemplate.setEnd(DateUtils.addDays(new Date(), 10));
         System.out.println(JSON.toJSONString(
                 merchantsServ.dropPassTemplate(passTemplate)
         ));
+        //{"background":2,"desc":"descriotion: ivy dev 3","end":1625170896647,
+        // "hasToken":true,"id":20,"limit":10000,"start":1623442896645,"summary":"summary:
+        // ivy dev 3","title":"ivydev"}
     }
 }

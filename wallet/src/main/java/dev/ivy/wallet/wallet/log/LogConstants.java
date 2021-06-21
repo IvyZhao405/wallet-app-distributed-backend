@@ -31,5 +31,7 @@ public class LogConstants {
         /**User get feedback */
         public static final String GET_FEEDBACK = "GetFeedback";
 
+        /**Create User */
+        public static final String CREATE_USER = "CreateUser";
     }
 }

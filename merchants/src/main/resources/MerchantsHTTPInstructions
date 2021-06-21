@@ -1,0 +1,7 @@
+Services needs to be turn on:
+    hbase, mysql, kafka, redis
+Database needs to be cleaned:
+    1. hbase 4 tables
+    2. mysql merchant info
+    3. /temp/token token info
+    4. redis key/value
