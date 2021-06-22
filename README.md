@@ -1,6 +1,6 @@
 # Wallet Application Backend
 
-##Introduction
+## Introduction
 This wallet app aims to be act like a digital wallet for user that user can keep card information, see avaialble coupons from various participating merchants, and claim coupons. <br>
 
 This repo consists two backend services for the wallet app:
@@ -10,18 +10,18 @@ This repo consists two backend services for the wallet app:
 * **User Wallet Service**: APIs for user client to create account, see avaialble coupons, claim coupons, use coupon, give feedback for app and for a particular coupon. 
 
 
-##Architecture
-![architecutre diagram](img/wallet_app_architecture.PNG)
+## Architecture
+![architecutre diagram](/img/wallet_app_architecture.PNG)
 **kafka**: 2.12, **redis**: 6.2.4, **hbase**: 1.3.5 <br>
 
-##Initialization
+## Initialization
 * **MySQL**: initialize a database named "wallet" and table called "merchants" 
 * **Hbase**: initialize 4 tables, check file for detail (wallet/src/main/resources/wallet.hsh)
 * **kafka**: create topic called "merchants-template" and consumer group called "wallet" 
 
-##APIs
+## APIs
 
-###Merchant:
+### Merchant:
 *  create merchant: 
 	*  POST: 127.0.0.1:9527/merchants/create
 	*  header: key: tokenm value: wallet-merchants
@@ -67,7 +67,7 @@ This repo consists two backend services for the wallet app:
 	* merchantsID, PassTemplateId
 	* Visit page and upload a token file
 
-###User:
+### User:
 * create user:
 	* POST: 127.0.0.1:9528/wallet/createuser
 	* sample data: `{
@@ -121,6 +121,6 @@ This repo consists two backend services for the wallet app:
 * check feedback info:
 	* GET: 127.0.0.1:9528/wallet/getfeedback?userId=${userId}
 
-##Demo
+## Demo
 
 
