@@ -11,7 +11,7 @@ This repo consists two backend services for the wallet app:
 
 
 ## Architecture
-![architecutre diagram](img/wallet_app_architecture.png)
+![architecutre diagram](img/wallet_app_architecture.png)<br>
 **kafka**: 2.12, **redis**: 6.2.4, **hbase**: 1.3.5 <br>
 
 ## Initialization
