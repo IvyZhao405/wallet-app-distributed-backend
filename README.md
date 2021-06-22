@@ -113,7 +113,7 @@ This repo consists two backend services for the wallet app:
 		        "comment": "I love this wallet app!"
 		    }`
 		* sample data for coupon feedback: 
-		* `       "userId": 109452,
+		* `      {"userId": 109452,
 		        "type": "pass",
 		        "templateId": "bdab4e51df98d1ad745cdc3dfa14d5c1",
 		        "comment": "saved money using this coupon!"
