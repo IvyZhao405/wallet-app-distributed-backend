@@ -13,6 +13,6 @@ public abstract class AbstractServiceTest {
 
     @Before
     public void init() {
-        userId = 222611L;
+        userId = 258548L;
     }
 }

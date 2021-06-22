@@ -2,9 +2,12 @@ spring:
   application:
     name: WalletMerchants
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/wallet?autoReconnect=true&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/wallet?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useSSL=false&serverTimezone=UTC
     username: root
     password: 910108zxc
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: false
   kafka:
     bootstrap-servers: 127.0.0.1:9092
     consumer:
@@ -16,6 +19,7 @@ server:
   port: 9527
 
 logging:
-  level: debug
+  level:
+    root: info
   file: wallet-merchants.log
 

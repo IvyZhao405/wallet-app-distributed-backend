@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Slf4j
 @RestController
-@RequestMapping("/passbook")
+@RequestMapping("/wallet")
 public class PassbookController {
 
     /**User coupon service**/
@@ -76,7 +76,7 @@ public class PassbookController {
                 LogConstants.ActionName.USER_USED_PASS_INFO,
                 null
         );
-        return userPassService.getUserPassInfo(userId);
+        return userPassService.getUserUsedPassInfo(userId);
     }
 
     /**
@@ -86,7 +86,7 @@ public class PassbookController {
      */
     @ResponseBody
     @PostMapping("/userusepass")
-    Response userUsePass(Pass pass) {
+    Response userUsePass(@RequestBody Pass pass) {
         LogGenerator.genLog(
                 httpServletRequest,
                 pass.getUserId(),
@@ -103,7 +103,7 @@ public class PassbookController {
      * @throws Exception
      */
     @ResponseBody
-    @PostMapping("/inventoryinfo")
+    @GetMapping("/inventoryinfo")
     Response inventoryInfo(Long userId) throws Exception {
         LogGenerator.genLog(
                 httpServletRequest,
@@ -141,7 +141,7 @@ public class PassbookController {
      */
     @ResponseBody
     @PostMapping("/createfeedback")
-    Response createFeedback(Feedback feedback) {
+    Response createFeedback(@RequestBody Feedback feedback) {
         LogGenerator.genLog(
                 httpServletRequest,
                 feedback.getUserId(),

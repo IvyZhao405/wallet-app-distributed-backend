@@ -41,7 +41,7 @@ public class MerchantsCtl {
 
     @ResponseBody
     @PostMapping("/drop")
-    public Response dropPassTemplate(PassTemplate passTemplate) {
+    public Response dropPassTemplate(@RequestBody PassTemplate passTemplate) {
         log.info("DropPassTemplate: {}", passTemplate);
         return merchantsServ.dropPassTemplate(passTemplate);
     }
