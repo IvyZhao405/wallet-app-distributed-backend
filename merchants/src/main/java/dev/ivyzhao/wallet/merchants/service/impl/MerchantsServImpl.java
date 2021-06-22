@@ -54,7 +54,7 @@ public class MerchantsServImpl implements IMerchantsServ {
     @Override
     public Response buildMerchantsInfoById(Integer id) {
         Response response = new Response();
-        Merchants merchants = merchantsDao.findById(id);
+        Merchants merchants = merchantsDao.findById(id).orElse(null);
         if (null == merchants) {
             response.setErrorCode(ErrorCode.MERCHANTS_NOT_EXISTS.getCode());
             response.setErrorMessage(ErrorCode.MERCHANTS_NOT_EXISTS.getDesc());
@@ -80,6 +80,6 @@ public class MerchantsServImpl implements IMerchantsServ {
             );
             log.info("DropPassTemplates: {}", passTemplate);
         }
-        return null;
+        return response;
     }
 }

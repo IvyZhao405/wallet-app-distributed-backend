@@ -2,15 +2,18 @@ spring:
   application:
     name: UserWallet
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/wallet?autoReconnect=true&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/wallet?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useSSL=false&serverTimezone=UTC
     username: root
     password: 910108zxc
+    driver-class-name: com.mysql.cj.jdbc.Driver
   kafka:
     bootstrap-servers: 127.0.0.1:9092
     consumer:
       group-id: wallet
     listener:
       concurrency: 4
+  jpa:
+    open-in-view: false
   data:
     hbase:
       quorum: 127.0.0.1:2181
@@ -24,5 +27,6 @@ server:
   port: 9528
 
 logging:
-  level: debug
+  level:
+    root: info
   file: wallet-user.log

@@ -1,0 +1,63 @@
+1. upload token
+    GET:127.0.0.1:9528/upload
+    merchantsId - 4
+    PassTemplateId: bdab4e51df98d1ad745cdc3dfa14d5c1
+
+2. Create user - "id": 199978
+    POST: 127.0.0.1:9528/wallet/createuser
+{
+    "baseInfo": {
+        "name": "user1",
+        "age": 25,
+        "sex": "m"
+    },
+    "otherInfo": {
+        "phone": "1234567890",
+        "address": "San Francisco, CA"
+    }
+}
+
+3. Inventory Information
+    GET: 127.0.0.1:9528/wallet/inventoryinfo?userId=199978
+
+4. Claim coupon -- claim coupon with token
+    POST: 127.0.0.1:9528/wallet/gainpasstemplate
+    {
+        "userId": 109452,
+        "passTemplate": {
+           "id": 4,
+           "title": "coupon-2",
+           "hasToken": true
+        }
+    }
+
+5. userpassinfo
+    Get: 127.0.0.1:9528/wallet/userpassinfo?userId=109452
+
+6. userusedpassinfo
+    Get: 127.0.0.1:9528/wallet/userusedpassinfo?userId=109452
+
+7. userusepass
+    POST: 127.0.0.1:9528/wallet/userusepass
+    {
+        "userId": 109452,
+        "templateId": "bdab4e51df98d1ad745cdc3dfa14d5c1"
+    }
+
+8. create Feedback
+    POST: 127.0.0.1:9528/wallet/createfeedback
+    {
+        "userId": 109452,
+        "type": "app",
+        "templateId": -1,
+        "comment": "I love this wallet app!"
+    }
+    {
+        "userId": 109452,
+        "type": "pass",
+        "templateId": "bdab4e51df98d1ad745cdc3dfa14d5c1",
+        "comment": "saved money using this coupon!"
+    }
+
+9. Check feedback info
+    GET: 127.0.0.1:9528/wallet/getfeedback?userId=109452

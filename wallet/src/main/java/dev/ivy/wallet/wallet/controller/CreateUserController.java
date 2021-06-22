@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Slf4j
 @RestController
-@RequestMapping("/passbook")
+@RequestMapping("/wallet")
 public class CreateUserController {
 
     /** Create user service **/

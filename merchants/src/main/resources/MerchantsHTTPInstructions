@@ -5,3 +5,46 @@ Database needs to be cleaned:
     2. mysql merchant info
     3. /temp/token token info
     4. redis key/value
+
+1. Create Merchant --id": 4
+    POST: 127.0.0.1:9527/merchants/create
+    header: token/wallet-merchants
+    sample data:
+    {
+        "name": "ivydev",
+        "logoUrl": "www.ivyzhao.dev",
+        "businessLicenseUrl": "www.ivyzhao.dev",
+        "phone": "1234567890",
+        "address": "Tampa Florida"
+    }
+
+2. Get Merchant info
+    GET: 127.0.0.1:9527/merchants/4
+    header: token/wallet-merchants
+
+3. Merchant upload coupon
+    POST: 127.0.0.1:9527/merchants/drop
+    header: token/wallet-merchants
+    {
+        "background": 1,
+        "desc": "ivyzhao.dev coupon",
+        "end": "2021-8-21",
+        "hasToken": false,
+        "id": 4,
+        "limit": 1000,
+        "start": "2021-6-21",
+        "summary": "coupon summary",
+        "title": "coupon-1"
+    }
+
+    {
+        "background": 1,
+        "desc": "ivyzhao.dev coupon",
+        "end": "2021-8-21",
+        "hasToken": true,
+        "id": 4,
+        "limit": 1000,
+        "start": "2021-6-21",
+        "summary": "coupon summary",
+        "title": "coupon-2"
+    }
